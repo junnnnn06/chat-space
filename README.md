@@ -3,11 +3,11 @@
 |Column|type|option|
 |------|----|------|
 |name|string|null: false, index: true, unique: true|
-|email|string|null: false, index: true, unique: true|
 
 ### Association
 - has_many :messages
 - has_many :groups, through: :members
+- has_many :members
 
 ## membersテーブル
 
@@ -23,19 +23,20 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ###Association
-- has_many :menbers
-- belongs_to :user
+- has_many :users, through: members
+- has_many :messages
+- has_many :members
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|-------|
 |image|text|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ###Association
 - belongs_to :user
