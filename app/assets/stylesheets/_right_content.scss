@@ -1,0 +1,25 @@
+.right_content {
+  background-color: #FBFBFB;
+  width: 100vw;
+  height: 100vh;
+    .right {
+      padding-top: 25px;
+      padding-left: 300px;
+        .group {
+          padding-left: 40px;
+          height: 100px;
+          background-color: white;
+          border-bottom: 0,5px solid #eeeeee;
+            .name {
+              font-size: 20px;
+              color: #333333;
+              padding-top: 35px;
+            }
+            .member_name {
+              font-size: 12px;
+              color: #999999;
+              padding-top: 15px;
+            }
+        }
+    }
+}
