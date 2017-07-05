@@ -1,30 +1,54 @@
-%html
-  %head
+.html
+  .head
     %title
       chat-space
-  %body
+  .body
     .header
       チャットグループが作成されました。
     .left_content
-      .user
-        .name
+      .left_content_user
+        %p.left_content_user__name
           ユーザー名
-        .content
-      .chat
+        %left_content_user__icon
+
+      .left_content_chat
         %ul
           %li
-            グループ1
+            %p.left_content_chat__name
+              ユーザー1
+            %p.left_content_chat__talk
+              メッセージ1
           %li
-            グループ2
+            %p.left_content_chat__name
+              ユーザー2
+            %p.left_content_chat__talk
+              メッセージ2
           %li
-            グループ3
+            %p.left_content_chat__name
+              ユーザー3
+            %p.left_content_chat__talk
+              メッセージ3
+
 
     .right_content
-      .right
-        .group
-          .name
-            グループ名
-          .member_name
-            member :ユーザー
-
-
+      .top_content
+        %p.name
+          グループ名
+        %p.member_name
+          member :ユーザー
+      .center_content
+        %ul
+          %li
+            %p.name
+              ユーザー名
+            %p.comment
+              おはよう!!
+        %ul
+          %li
+            %p.name
+              ユーザー名
+            %p.comment
+              こんにちは!!
+      .bottom_content
+        .textbox
+          %p.textbox__message

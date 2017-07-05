@@ -3,11 +3,12 @@
   float: left;
   height: 100vh;
   background-color: #2f3e51;
-    .user {
+
+    .left_content_user {
       height: 100px;
       background-color: #253141;
       padding-top: 25px;
-        .name {
+        &__name {
           color: #FFFFFF;
           font-size: 16px;
           font-weight: bold;
@@ -15,12 +16,18 @@
           padding-left: 20px;
         }
     }
-    .chat {
-      .ul {
-        .li {
-          font-size: 15px;
-          color: #FFFFFF;
-        }
+    .left_content_chat {
+      padding-left: 20px;
+      &__name {
+        color: #FFFFFF;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      &__talk {
+        color: #FFFFFF;
+        font-size: 11px;
+        padding-bottom: 40px;
       }
     }
 }
