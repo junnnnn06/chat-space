@@ -1,3 +1,4 @@
+!!!
 .html
   .head
     %title
@@ -5,11 +6,13 @@
   .body
     .header
       チャットグループが作成されました。
+
     .left_content
-      .left_content_user
-        %p.left_content_user__name
+      .user
+        %i.fa.fa-cog.user__icon
+        %i.fa.fa-pencil-square-o.user__icon
+        %p.user__name
           ユーザー名
-        %left_content_user__icon
 
       .left_content_chat
         %ul
@@ -50,8 +53,10 @@
               ユーザー名
             %p.comment
               こんにちは!!
-      .bottom_content
-        = link_to "Send", "", class: "send_message"
-        %form.textbox_message
-          %input{type: "text", placeholder: "type a message", name: "text", class: "textbox_message__text"}
-          %i.fa.fa-picture-o
+      .format
+        %input.format__input{class: 'submit', type: 'text',placeholder: "Type a message"}
+
+        %i.fa.fa-file-image-o.format__icon
+          = link_to "", "", type: "file", name: "image", class: "icon_tag"
+
+        %button.format__button{ type: "submit"}Send

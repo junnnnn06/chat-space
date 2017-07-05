@@ -45,37 +45,48 @@
           padding-bottom: 40px;
         }
     }
-    .bottom_content {
-      height: 90px;
-      background-color: #DCDCDC;
-      padding: 0 40px;
-      position: relative;
-        .send_message {
-          float: right;
-          color: white;
-          padding: 13px 30px;
-          background-color: #38AEF0;
-          position: absolute;
-          bottom: 20px;
-          right: 40px;
-        }
-        .textbox_message {
-          height: 50px;
-          width: calc(100% - 195px);
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          background-color: white;
-            &__text {
-              line-height: 50px;
-              border: none;
-              width: 100%;
-            }
-            &__icon {
-              line-height: 50px;
+  .format{
+    background-color: #DCDCDC;
+    height: 90px;
+    float: left;
+    clear: both;
+    width: calc(100vw - 340px);
+    padding-right: 40px;
 
-            }
+    &__input{
+      height: 50px;
+      width: calc(100% - 190px);
+      padding-left: 10px;
+      font-size: 16px;
+      color: #434A54;
+      border: none;
+      margin: 20px 0px 20px 40px;
+      float: left;
+
+    }
+
+    &__icon{
+          font-size: 20px;
+          background-color: white;
+          float: left;
+          height: 50px;
+          margin: 20px 15px 20px 0px;
+          padding-right: 10px;
+          line-height: 50px;
+      }
+
+    &__button{
+      height: 50px;
+      width: 90px;
+      font-size: 16px;
+      color: white;
+      background-color: #38AEF0;
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      float: left;
+        .send_message {
         }
+      }
     }
 }
