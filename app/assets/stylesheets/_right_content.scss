@@ -1,0 +1,92 @@
+.right_content {
+  background-color: #FBFBFB;
+  width: calc(100vw - 300px);
+  height: 100%;
+  float: left;
+    .top_content {
+      padding: 0px 40px 0 40px;
+      height: 100px;
+      border-bottom: 0,5px solid #eeeeee;
+      background-color: white;
+        .edit_chat {
+          float: right;
+          border: solid 1.5px #38AEF0;
+          color: #38AEF0;
+          padding: 10px 20px;
+          position: absolute;
+          top: 28px + 25px;
+          right: 40px;
+        }
+        .name {
+          font-size: 20px;
+          color: #333333;
+          padding-top: 35px;
+        }
+        .member_name {
+          font-size: 12px;
+          color: #999999;
+          margin-top: 15px;
+        }
+    }
+    .center_content {
+      background-color: #FBFBFB;
+      padding: 0 40px;
+      height: calc(100vh - 215px);
+        .name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+          padding-top: 46px;
+        }
+        .comment {
+          font-size: 14px;
+          color: #434A54;
+          padding-top: 10px;
+          padding-bottom: 40px;
+        }
+    }
+  .format{
+    background-color: #DCDCDC;
+    height: 90px;
+    float: left;
+    clear: both;
+    width: calc(100vw - 340px);
+    padding-right: 40px;
+
+    &__input{
+      height: 50px;
+      width: calc(100% - 190px);
+      padding-left: 10px;
+      font-size: 16px;
+      color: #434A54;
+      border: none;
+      margin: 20px 0px 20px 40px;
+      float: left;
+
+    }
+
+    &__icon{
+          font-size: 20px;
+          background-color: white;
+          float: left;
+          height: 50px;
+          margin: 20px 15px 20px 0px;
+          padding-right: 10px;
+          line-height: 50px;
+      }
+
+    &__button{
+      height: 50px;
+      width: 90px;
+      font-size: 16px;
+      color: white;
+      background-color: #38AEF0;
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      float: left;
+        .send_message {
+        }
+      }
+    }
+}
