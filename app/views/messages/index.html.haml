@@ -32,6 +32,7 @@
 
     .right_content
       .top_content
+        = link_to 'Edit', '', class: "edit_chat"
         %p.name
           グループ名
         %p.member_name
@@ -50,5 +51,7 @@
             %p.comment
               こんにちは!!
       .bottom_content
-        .textbox
-          %p.textbox__message
+        = link_to "Send", "", class: "send_message"
+        %form.textbox_message
+          %input{type: "text", placeholder: "type a message", name: "text", class: "textbox_message__text"}
+          %i.fa.fa-picture-o

@@ -1,13 +1,12 @@
 .left_content {
   width: 300px;
   float: left;
-  height: 100vh;
+  height: 100%;
   background-color: #2f3e51;
 
     .left_content_user {
       height: 100px;
       background-color: #253141;
-      padding-top: 25px;
         &__name {
           color: #FFFFFF;
           font-size: 16px;
@@ -18,6 +17,7 @@
     }
     .left_content_chat {
       padding-left: 20px;
+      height: calc(100vh - 100px - 25px);
       &__name {
         color: #FFFFFF;
         font-size: 15px;
