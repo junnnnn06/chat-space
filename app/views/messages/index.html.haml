@@ -36,7 +36,7 @@
 
     .right_content
       .top_content
-        = link_to 'Edit', '/users/:id/edit', class: "edit_chat"
+        = link_to 'Edit', edit_user_registration_path, method: :get, class: "edit_chat"
         %p.name
           グループ名
         %p.member_name
