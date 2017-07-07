@@ -7,9 +7,7 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: true,
             length: { minimum: 8}
 
-  validates :name, uniqueness: true
-  validates :name, presence: true
+  validates :name, uniqueness: true, presence: true
 
-  validates :email, presence: true
-  validates :email, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 end
