@@ -57,3 +57,5 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'pry-rails'
+gem 'pry-byebug'
+gem 'devise-i18n'

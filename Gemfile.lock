@@ -58,6 +58,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.1.2)
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -112,6 +113,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     puma (3.9.1)
@@ -200,6 +204,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  devise-i18n
   erb2haml
   font-awesome-rails
   haml-rails
@@ -207,6 +212,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
+  pry-byebug
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.1)
