@@ -1,5 +1,8 @@
 class GroupsController < ApplicationController
 
+  def index
+  end
+
   def new
   end
 
@@ -10,9 +13,6 @@ class GroupsController < ApplicationController
   end
 
   def update
-  end
-
-  def index
   end
 
 end
