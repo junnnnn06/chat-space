@@ -7,8 +7,9 @@
     .left_content
       = link_to edit_user_registration_path do
         %i.fa.fa-cog
-      .user
+      = link_to new_group_path do
         %i.fa.fa-pencil-square-o.user__icon
+      .user
         %p.user__name
           - if user_signed_in?
             = current_user.name
@@ -34,7 +35,7 @@
 
     .right_content
       .top_content
-        = link_to 'Edit', "", class: "edit_chat"
+        = link_to 'Edit', "/groups/:id/edit", class: "edit_chat"
         %p.name
           グループ名
         %p.member_name
