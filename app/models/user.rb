@@ -8,6 +8,8 @@ class User < ApplicationRecord
             length: { minimum: 8}
 
   validates :name, uniqueness: true, presence: true
-
   validates :email, presence: true, uniqueness: true
+
+  has_many :group_users
+  has_many :groups, through: :group_users
 end

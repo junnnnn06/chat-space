@@ -25,7 +25,7 @@
 |------|----|-------|
 |name|string|null: false, unique: true|
 
-###Association
+### Association
 - has_many :users, through: members
 - has_many :messages
 - has_many :members
@@ -38,6 +38,6 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
+### Association
 - belongs_to :user
 - belongs_to :member
