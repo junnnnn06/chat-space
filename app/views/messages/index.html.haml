@@ -35,7 +35,7 @@
 
     .right_content
       .top_content
-        = link_to 'Edit', "/groups/:id/edit", class: "edit_chat"
+        = link_to 'Edit', edit_group_path(@group), class: "edit_chat"
         %p.name
           グループ名
         %p.member_name
