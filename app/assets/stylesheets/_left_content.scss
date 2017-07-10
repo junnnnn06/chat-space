@@ -33,7 +33,8 @@
     .left_content_chat {
       padding-left: 20px;
       height: calc(100vh - 100px - 25px);
-      &__name {
+      ul{
+        li{
         color: #FFFFFF;
         font-size: 15px;
         padding-top: 20px;
@@ -45,4 +46,5 @@
         padding-bottom: 40px;
       }
     }
+  }
 }
