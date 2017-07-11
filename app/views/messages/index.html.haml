@@ -4,7 +4,7 @@
     %title
       chat-space
   .body
-  = render partial: "/groups/index"
+    = render partial: "/groups/sidebar", locals: { groups: @groups }
 
     .right_content
       .top_content
@@ -24,7 +24,7 @@
           %li
             %p.name
               ユーザー名
-            %p.comment
+            %p.comments
               こんにちは!!
       .format
         %input.format__input{class: 'submit', type: 'text',placeholder: "Type a message"}
