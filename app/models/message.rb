@@ -4,4 +4,5 @@ class Message < ApplicationRecord
 
   belongs_to :user
   belongs_to :member
+  mount_uploader :image, ImageUploader
 end
