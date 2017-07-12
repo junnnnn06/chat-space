@@ -10,6 +10,6 @@
 
   .left_content_chat
     %ul
-      - groups.each do |group|
+      - message.each do |message|
         %li
-          = group.name
+          = message.name
