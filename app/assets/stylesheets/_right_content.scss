@@ -28,32 +28,31 @@
           margin-top: 15px;
         }
     }
-    .center_content {
+    .center-content {
       background-color: #FBFBFB;
       padding: 0 40px;
       max-height: calc(100vh - 190px);
-      ul {
-        li {
-          .name {
-            margin-top: 7px;
-            font-size: 18px;
-            font-weight: bold;
-            float: left;
-          }
-          .date {
-            font-size: 10px;
-            color: #444444;
-            float: left;
-            padding-left: 50px;
-            padding-top: 15px;
-          }
-          .message {
-            font-size: 15px;
-            clear: both;
-            margin-bottom: 20px;
-          }
+      overflow: scroll;
+      .chat{
+        &__name {
+          margin-top: 7px;
+          font-size: 18px;
+          font-weight: bold;
+          float: left;
         }
-      }
+        &__date {
+          font-size: 10px;
+          color: #444444;
+          float: left;
+          padding-left: 50px;
+          padding-top: 15px;
+        }
+       &__message {
+          font-size: 15px;
+          clear: both;
+          margin-bottom: 20px;
+          }
+       }
     }
   .format{
     background-color: #DCDCDC;

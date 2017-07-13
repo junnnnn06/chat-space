@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!, only: :index
-  before_action :set_groups, :set_group_info, only: [:index, :create]
+  before_action :set_groups, :set_group, only: [:index, :create]
 
   def index
     @messages = @group.messages
@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
 
   def create
     @messages = @group.messages
-    @message = Message.new(message_params)
+    @message = @group.messages.new(message_params)
     if @message.save
       redirect_to group_messages_path(params[:group_id]), notice: "メッセージ送信成功"
     else
@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
     @groups = current_user.groups
   end
 
-  def set_group_info
+  def set_group
     @group = Group.find(params[:group_id])
   end
 end
