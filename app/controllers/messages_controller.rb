@@ -3,14 +3,14 @@ class MessagesController < ApplicationController
   before_action :set_group, only: [:index, :create]
 
   def index
-    @message = @group
-    @messages = Message.new
+    @groups
+    @message = Message.new
   end
 
   def create
     @groups = current_user.groups
-    @messages = Message.new(message_params)
-    if @messages.save
+    @message = Message.new(message_params)
+    if @message.save
       redirect_to group_messages_path(params[:group_id]), notice: "メッセージ送信成功"
     else
       flash.now[:alert] = "メッセージを入力して下さい"
@@ -24,6 +24,6 @@ class MessagesController < ApplicationController
   end
 
   def set_group
-    @group = current_user.groups
+    @groups = current_user.groups
   end
 end
