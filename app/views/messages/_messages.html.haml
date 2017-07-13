@@ -1,0 +1,10 @@
+.center_content
+  %ul
+    - messages.each do |message|
+      %li
+        .name
+          = current_user.name
+        .date
+          = message.created_at
+        .message
+          = message.body

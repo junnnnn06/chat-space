@@ -10,22 +10,12 @@
       .top_content
         = link_to 'Edit',"/groups/1/edit", class: "edit_chat"
         %p.name
-          グループ名
+          サンプルグループ
         %p.member_name
-          member :ユーザー
-      .center_content
-        %ul
-          %li
-            %p.name
-              ユーザー名
-            %p.comment
-              おはよう!!
-        %ul
-          %li
-            %p.name
-              ユーザー名
-            %p.comments
-              こんにちは!!
+          = current_user.name
+
+      = render partial: "messages", locals: { messages: @messages }
+
       .format
         = form_for @message , url: group_messages_path do |f|
           .field-label
