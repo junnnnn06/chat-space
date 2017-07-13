@@ -10,7 +10,7 @@
       .top_content
         = link_to 'Edit',"/groups/1/edit", class: "edit_chat"
         %p.name
-          サンプルグループ
+          = @group.name
         %p.member_name
           = current_user.name
 
