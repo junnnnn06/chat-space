@@ -14,7 +14,7 @@
         %p.member_name
           = current_user.name
 
-      = render partial: "messages", locals: { messages: @messages }
+      = render "messages", messages: @messages
 
       .format
         = form_for @message , url: group_messages_path do |f|
