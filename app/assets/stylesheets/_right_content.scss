@@ -28,22 +28,32 @@
           margin-top: 15px;
         }
     }
-    .center_content {
+    .center-content {
       background-color: #FBFBFB;
       padding: 0 40px;
-      height: calc(100vh - 190px);
-        .name {
-          font-size: 16px;
+      max-height: calc(100vh - 190px);
+      overflow: scroll;
+      .chat{
+        overflow: scroll;
+        &__name {
+          margin-top: 7px;
+          font-size: 18px;
           font-weight: bold;
-          color: #434A54;
-          padding-top: 46px;
+          float: left;
         }
-        .comment {
-          font-size: 14px;
-          color: #434A54;
-          padding-top: 10px;
-          padding-bottom: 40px;
+        &__date {
+          font-size: 10px;
+          color: #444444;
+          float: left;
+          padding-left: 50px;
+          padding-top: 15px;
         }
+       &__message {
+          font-size: 15px;
+          clear: both;
+          margin-bottom: 20px;
+          }
+       }
     }
   .format{
     background-color: #DCDCDC;

@@ -9,7 +9,13 @@
         = current_user.name
 
   .left_content_chat
-    %ul
-      - groups.each do |group|
+    - groups.each do |group|
+      %ul
         %li
-          = group.name
+          %p.chat-group
+            = group.name
+          %p.chat-message
+            - if group.messages.present?
+              = group.messages.last.body
+            - else
+              まだメッセージが投稿されていません。

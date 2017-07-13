@@ -1,0 +1,9 @@
+.center-content
+  .chat
+    .chat__name
+      = current_user.name
+    .chat__date
+      = message.created_at
+    .chat__message
+      = message.body
+      = image_tag message.image
