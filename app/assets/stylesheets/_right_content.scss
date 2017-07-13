@@ -31,7 +31,7 @@
     .center_content {
       background-color: #FBFBFB;
       padding: 0 40px;
-      height: calc(100vh - 190px);
+      max-height: calc(100vh - 190px);
       ul {
         li {
           .name {

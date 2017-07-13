@@ -14,7 +14,7 @@
         %p.member_name
           = current_user.name
 
-      = render "messages", messages: @messages
+      = render @messages
 
       .format
         = form_for @message , url: group_messages_path do |f|
