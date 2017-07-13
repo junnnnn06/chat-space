@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @groups = current_user.groups
+    @groups
     @message = Message.new(message_params)
     if @message.save
       redirect_to group_messages_path(params[:group_id]), notice: "メッセージ送信成功"
