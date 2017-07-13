@@ -1,7 +1,7 @@
 class Message < ApplicationRecord
-  validates :user_id, null: false, foreign_key: true
-  validates :group_id, null: false, foreign_key: true
+  validates :body, presence: true, unless: :image?
 
   belongs_to :user
-  belongs_to :member
+  belongs_to :group
+  mount_uploader :image, ImageUploader
 end

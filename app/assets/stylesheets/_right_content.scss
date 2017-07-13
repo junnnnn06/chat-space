@@ -52,40 +52,42 @@
     clear: both;
     width: calc(100vw - 340px);
     padding-right: 40px;
-
-    &__input{
-      height: 50px;
-      width: calc(100% - 190px);
-      padding-left: 10px;
-      font-size: 16px;
-      color: #434A54;
-      border: none;
-      margin: 20px 0px 20px 40px;
-      float: left;
-
-    }
-
-    &__icon{
+    .field-label{
+      &__input{
+        height: 50px;
+        width: calc(100% - 190px);
+        padding-left: 10px;
+        font-size: 16px;
+        color: #434A54;
+        border: none;
+        margin: 20px 0px 20px 40px;
+        float: left;
+        &__icon{
+          display: none;
+          &__icong {
           font-size: 20px;
           background-color: white;
           float: left;
           height: 50px;
+          width: 20px;
           margin: 20px 15px 20px 0px;
           padding-right: 10px;
           line-height: 50px;
+          }
+          }
+        }
       }
-
-    &__button{
-      height: 50px;
-      width: 90px;
-      font-size: 16px;
-      color: white;
-      background-color: #38AEF0;
-      border: none;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      float: left;
-        .send_message {
+    .field-submit{
+      &__botton{
+        height: 50px;
+        width: 90px;
+        font-size: 16px;
+        color: white;
+        background-color: #38AEF0;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        float: right;
         }
       }
     }
