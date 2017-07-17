@@ -36,7 +36,7 @@ describe MessagesController, type: :controller do
     end
   end
 
-  describe 'post#create' do
+  describe 'POST#create' do
     subject {post :create, params: { group_id: group, message: attributes_for(:message)}}
 
     context "ログインに成功した場合" do
