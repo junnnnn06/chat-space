@@ -6,10 +6,11 @@ describe MessagesController, type: :controller do
   let(:message){ build(:message, user, group)}
 
   describe 'GET#index' do
+  subject {get :index, params: {group_id: group}}
     context 'ログインしている場合' do
     before do
       login_user user
-      get :index, params: {group_id: group}
+      subject
     end
 
         it "意図した画面に遷移するか" do
@@ -23,12 +24,22 @@ describe MessagesController, type: :controller do
       it "groupが定義されているか" do
         expect(assigns(:group)).to eq(group)
       end
+
+      it "assigns the requested contact to @groups" do
+        groups = user.groups
+        expect(assigns(:messages)).to eq groups
+      end
+
+      it "is assigns the requested contact to @messages" do
+        messages = group.messages
+        expect(assigns(:messages)).to eq messages
+      end
     end
   end
 
   context 'ログインしていない場合' do
     before do
-      get :index, params: {group_id: group}
+      subject
     end
 
     it "意図したビューにリダイレクトできるか" do
