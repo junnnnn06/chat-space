@@ -26,7 +26,7 @@ describe MessagesController, type: :controller do
 
       it "assigns the requested contact to @groups" do
         groups = user.groups
-        expect(assigns(:messages)).to eq(groups)
+        expect(assigns(:groups)).to eq(groups)
       end
 
       it "is assigns the requested contact to @messages" do
