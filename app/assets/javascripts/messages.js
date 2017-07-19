@@ -1,7 +1,7 @@
 $(function() {
   function buildHTML(message) {
     var html = `<ul>
-                  </li>
+                  <li>
                     <p class = "middle_content__name">${message.name}
                     </p>
                     <p class = "middle_content__date">${message.date}
@@ -15,7 +15,7 @@ $(function() {
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -26,8 +26,8 @@ $(function() {
     })
     .done(function(data) {
       var html = buildHTML(data);
-      $('.middle_content').append(html)
-      $('.field-label__input').val('')
+      $('.middle_content').append(html);
+      $('.field-label__input').val('');
       $('.middle_content').animate({scrollTop: $('.middle_content')[0].scrollHeight}, 'slow');
 
     })
