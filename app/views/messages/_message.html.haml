@@ -1,9 +1,9 @@
-.center-content
-  .chat
-    .chat__name
+%ul
+  %li
+    %p.middle_content__name
       = current_user.name
-    .chat__date
+    %p.middle_content__date
       = message.created_at
-    .chat__message
+    %p.middle_content__messages
       = message.body
       = image_tag message.image
