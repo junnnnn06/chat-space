@@ -3,8 +3,12 @@ class MessagesController < ApplicationController
   before_action :set_groups, :set_group, only: [:index, :create]
 
   def index
-    @messages = @group.messages.includes(:group)
     @message = Message.new
+    @messages = @group.messages.includes(:group)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

@@ -29,10 +29,22 @@ $(function() {
       $('.middle_content').append(html);
       $('.field-label__input').val('');
       $('.middle_content').animate({scrollTop: $('.middle_content')[0].scrollHeight}, 'slow');
-
     })
     .fail(function() {
       alert('エラーが発生しました');
     })
   })
+  var interval = setInterval(function() {
+  if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    $.ajax({
+      url: location.href,
+      type: "GET",
+      dataType: 'json'
+    })
+    .done(function(message) {
+      var id = $('.middle_content:last').attr('data_message_id')
+
+    })
+  })
+}
 })

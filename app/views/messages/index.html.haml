@@ -13,7 +13,7 @@
           = @group.name
         %p.member_name
           = current_user.name
-      .middle_content
+      .middle_content{ data_message_id: "#{message.id}"}
         = render @messages
 
       .format
