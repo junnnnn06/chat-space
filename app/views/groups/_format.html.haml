@@ -16,16 +16,17 @@
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       = f.label :チャットメンバー, class: "chat-group-form__label"
-    .uchat-grop-form__field--right
+    .chat-grop-form__field--right
       / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
       -# .p
       -#   = f.collection_check_boxes :user_ids, User.all, :id, :name do |b|
       -#     = b.label { b.check_box + b.text }
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
-      -# #chat-group-users
-      -#   #chat-group-user-22.chat-group-user.clearfix
-      -#     %input{:name => "chat_group[user_ids][]", :type => "hidden", :value => "22"}/
-      -#     %p.chat-group-user__name seo_kyohei
+      #chat-group-users
+        #chat-group-user-22.chat-group-user.clearfix
+          %input{:name => "chat_group[user_ids][]", :type => "hidden", :value => "22"}
+          %p.chat-group-user__name=current_user.name
+          %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
   .chat-group-form__field.clearfix
     .chat-group-form__field--lefts
     .chat-group-form__field--right
